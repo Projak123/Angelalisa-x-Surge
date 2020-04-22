@@ -1,0 +1,249 @@
+# Surge 配置文档 _ (详解）
+[General]
+// Auto
+### 日志等级: warning, notify, info, verbose (默认值: notify)
+loglevel = notify
+
+### 强制使用特定的DNS服务器
+dns-server = system,1.1.1.1,1.0.0.1,1.2.4.8,223.5.5.5,223.6.6.6,114.114.114.114,119.29.29.29,117.50.10.10
+
+### 跳过某个域名或者IP段
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,17.0.0.0/8,localhost,*.local,*.crashlytics.com
+
+### 允许外部控制器访问Surge
+external-controller-access = zz@0.0.0.0:12345
+
+### Surge 作为 HTTP/SOCKS5 代理服务器向 Wi-Fi 网络下的其他设备提供服务器**
+### App使用socks5代理：有一些app提供了内置代理设置，ip填写本地ip127.0.0.1，端口填写Surge的socks5监听端口。
+allow-wifi-access = true
+// macOS
+interface = 0.0.0.0
+socks-interface = 0.0.0.0
+
+### HTTP 代理服务端口 (默认值: 6152)   (Mac版)
+port = 8888
+
+### SOCKS5 代理服务端口 (默认值: 6153) (Mac版)
+socks-port = 8889
+
+enhanced-mode-by-rule = false
+show-error-page-for-reject = true
+
+// iOS
+### HTTP 代理服务端口 (默认值: 6152)   (iOS版)
+wifi-access-http-port = 8888
+
+### SOCKS5 代理服务端口 (默认值: 6152) (iOS版)
+wifi-access-socks5-port = 8889
+
+// Auto
+### 兼容模式：禁用、Proxy with Loopback Address、Proxy Only、TUN Only（0、1、2、3）
+compatibility-mode = 0
+
+### 不包括简单主机名
+exclude-simple-hostnames = true
+
+### 是否启动完整的 IPv6 支持 (默认值: false)
+ipv6 = true
+replica = false
+### 是否启动Network.framework (默认值: false)
+network-framework = false
+
+### INTERNET 测试 URL (使用网络诊断功能时访问的 URL)
+internet-test-url = http://www.qualcomm.cn/
+
+### 代理测速 URL (测试代理策略时的 URL)
+proxy-test-url = http://www.qualcomm.cn/generate_204
+
+### 测速超时 (秒)
+test-timeout = 5
+
+### 强制 TCP 连接为 HTTP 连接
+force-http-engine-hosts = api.joybj.com,api.alsend.com,api.whizzone.com,api.4shade.com,btrace.qq.com,log.kuwo.cn,g.koowo.com
+
+### 返回真实 IP
+### always-real-ip = *.apple.com
+### 劫持其它 DNS 服务器
+### hijack-dns = 8.8.8.8:53
+
+### 绕过特定 IP 范围
+### tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+
+### 包含特定 IP 范围
+### tun-included-routes = 192.168.1.12/32
+---
+
+### 该段定义抓取流量的过滤
+[Replica]
+
+### 隐藏所有发往 *.Apple.com 和 *.icloud.com 的请求（该选项只是在抓取结果中隐藏了请求）
+hide-apple-request = true
+
+### 隐藏Crashlytics请求
+hide-crashlytics-request = true
+
+### 隐藏UDP会话（默认值: false）
+hide-udp = false
+
+### 使用关键词过滤器（默认值: false）
+use-keyword-filter = false
+
+---
+
+[Proxy Group]
+### /一共有三种策略组类型: “select“, “url-test” 和 “ssid“/
+/select: 具体哪个子策略将被使用，由用户界面上进行选择。/
+/url-test: 具体哪个子策略将被使用，通过测试到具体 URL 的访问速度选择/
+> url: 必填，测试时用到的目标 URL.
+
+> interval: 可选, 秒 (默认值: 600s)，指定在多长时间后，上次的测试结果将被抛弃。
+
+> tolerance: 可选, 毫秒 (默认值: 100ms)， 只有当新的优选线路，比原优选线路的响应时间，大于该值的时候，才会触发线路变更。相当于是一个开启线路变更的阈值。
+
+> timeout: 可选, 秒 (默认值: 5s)，如果某策略在该时间后依然没有完成，放弃该策略。
+/ssid: 具体哪个子策略将被使用，根据 Wi-FI 的 SSID 决定/
+> default: 必填， 默认策略。
+> cellular: 可选，在数据网络下的策略。 若不填，那么默认策略将被使用。
+
+[SSID Setting]
+
+### 连接到WiFi名为“wifi-name”时停止Surge
+"wifi-name" suspend=true
+
+### /核心与灵魂：Rule/
+
+有了代理之后，我们仍然无法正常使用Surge来上网，因为没有网络规则，Proxy会代理一切网络请求。这样的话与全局模式并无差异，违背了我们想要pac模式的初衷。下面就为大家简单介绍下规则（rule）怎么写：
+
+### /一个规则有三个基础部分:类型, 值, 策略。/
+> 有三种基于域名的类型: “DOMAIN“（完整域名）, “DOMAIN-SUFFIX” （域名后缀）和 “DOMAIN-KEYWORD“（域名关键词）。
+
+> 有两种基于ip的类型: “IP-CIDR” and “GEOIP“，如果是一个使用域名进行访问的请求，那么 Surge 将进行 DNS 查询以确认是否应该被该规则匹配.。若 DNS 查询失败，将放弃规则匹配过程并直接给出错误。
+
+> 值对应相应的类型，域名的话后面填写的值必须要域名，ip类型的话后面的值必须是ip。
+
+### /有几种策略：/
+```
+DIRECT：表示直连而不再任何代理，一般用于国内网站以及一些没有被墙的国外服务器网站
+Proxy：表示代理，直接交给刚刚填写好的代理组来代理，一般用于被封锁的国外网站
+REJECT：表示拒绝访问，可用来屏蔽一些广告（比如爱奇艺等），也可以阻止一些破解版软件认证和自动更新
+no-resolve: （可选）如果是一个使用域名进行访问的请求，跳过该条规则，不触发 DNS 查询。
+force-remote-dns: （可选）如果某请求被该规则匹配, 且策略不是DIRECT. 那么 DNS 查询将永远在远端代理服务器执行, 即使该请求由 Surge TUN 处理。
+```
+示例：
+```
+DOMAIN-SUFFIX,appldnld.apple.com,DIRECT
+DOMAIN-KEYWORD,google,ProxyHTTP,force-remote-dns
+DOMAIN-KEYWORD,youtube,Proxy
+DOMAIN-SUFFIX,ad.com,REJECT
+DOMAIN,www.newlearner.site,DIRECT
+#判断是否是局域网，如果是，走直连
+IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+IP-CIDR,10.0.0.0/8,DIRECT
+# 判断服务器所在地，如果是国内，走直连
+GEOIP,CN,DIRECT
+```
+⚠️
+规则写完之后不要忘记在最后一行加上：FINAL,Proxy（其他的走代理）
+
+同样的在surge3之后rules也支持了远端list
+```
+RULE-SET, https://远端.list, 策略组名称
+```
+
+这样就将之前大篇幅的rules简化，并且可以根据不同的策略分门别类的写相对应的list。老版本的配置依然适用。
+---
+
+## 其他
+[Hosts]
+相当于是本地本地 DNS 记录，该功能等同于 /etc/hosts，加上了泛解析和别名支持。
+[URL Rewrite]
+^http://www.google.cn http://www.google.com header
+^http://yachen.com https://yach.me 302
+该段定义针对 HTTP 请求的 URL 重定向规则，即当你打开一个URL时代理会自动帮你跳转到另一个URL。（个人感觉类似dns污染）
+有两种重定向方式: “header” 和 “302“
+①Header 模式
+Surge 会修改发出的 http header，必要时还会修改 Host 字段。客户端将感知不到这个重定向过程. 不支持重定向到一个 HTTPS 的地址。
+② 302 模式
+Surge 直接简单的返回一个302重定向回应。
+
+[Script]
+原理：使用 JavaScript 来对 response body 进行修改。
+```
+[Script]
+http-response .* script-path=anti-spoiler.js
+```
+
+### 每一行配置分为三个部分，第一部分为脚本类型，目前仅支持 http-response； 第二部分为针对请求 URL 的正则表达式； 第三部分为参数表，使用半角逗号分隔，参数有：
+// script-path：JS 脚本的路径，可以是 URL、相对路径或绝对路径（仅限 macOS），必填。
+// script-update-interval：JS 脚本的更新间隔，仅当使用 URL 时生效，选填，默认值为 24 小时。
+// max-size：最大允许进行修改的 body 大小，单位为字节，选填，默认值为 524288 (512KB)。
+### 由于进行 script 修改会需要 Surge 先将 response body 完全下载后再进行处理，如果遇到了较大的数据将导致内存占用量暴增，Surge iOS 受系统内存限制在该情况下极易被直接终止。
+### 当返回的数据长度超过 max-size 设定值后，Surge 将放弃对该请求执行脚本并回退到 passthrough 模式。
+### 编写脚本
+### Surge 会向 JSVM 上下文传入以下全局变量：
+// body[String]: 原始 response body
+// status[Number]: HTTP 状态码
+// method[String]: HTTP 请求方法
+// url[String]: URL 地址
+### Surge 将使用脚本的最后一行运行结果作为返回值，返回值约定如下：
+// String 类型: 将使用该结果作为新的 response body
+// Null: 终止该请求
+// undefined: 不对请求进行修改
+### 一个简单的样例
+```
+var obj = JSON.parse(body); // 对 response body 进行 JSON 解析得到 Object
+obj['surge'] = 'OK'; // 增加 'surge' 字段
+JSON.stringify(obj); // 进行 JSON 编码并作为结果返回
+```
+
+
+> 基于*域名*判断并屏蔽（REJECT）请求
+DOMAIN,pingma.qq.com,REJECT
+
+> 基于*域名后缀*判断屏蔽（REJECT）请求
+DOMAIN-SUFFIX,flurry.com,REJECT
+
+> 基于*关键词*后缀判断走代理（Proxy），强制不尊重系统代理的请求走 Packet-Tunnel-Provider
+DOMAIN-KEYWORD,google,Proxy,force-remote-dns
+
+> 基于域名后缀判断请求走直连（DIRECT）
+DOMAIN-SUFFIX,126.net,DIRECT
+
+> Telegram.app 指定“no-resolve”Surge 忽略这个规则与域的请求。 
+IP-CIDR,91.108.56.0/22,Proxy,no-resolve 
+> 判断是否是*局域网*，如果是，走直连
+IP-CIDR,192.168.0.0/16,DIRECT
+> 判断*服务器所在地*，如果是国内，走直连
+GEOIP,CN,DIRECT
+> 其他的走代理
+FINAL,Proxy
+
+[[# Surge 答疑]]
+> url-test: 具体哪个子策略将被使用, 通过测试到具体 URL 的访问速度选择
+🎄 Auto = url-test, policy-path=resources/policy/auto.list, url = http://www.gstatic.com/generate_204, interval = 60,update-interval=21600, evaluate-before-use = true
+// auto.list示例地址：https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/policy/auto.list
+
+> fallback: 具体哪个子策略将被使用, 通过测试到具体 URL 的可用性决定
+🛷 Fallback = fallback, policy-path=resources/policy/auto.list, url = http://www.gstatic.com/generate_204, interval = 60,update-interval=21600, evaluate-before-use = true
+// auto.list示例地址：https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/policy/auto.list
+
+> select: 具体哪个子策略将被使用, 由用户界面上进行选择，（Surge 仅支持 select 组嵌套其他策略组）
+🛥 Select = select, policy-path=resources/policy/all.list,update-interval=21600
+// all.list示例地址：https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/policy/all.list
+
+> ssid: 具体哪个子策略将被使用, 根据 Wi-FI 的 SSID 决定
+// 🛸 SSID = ssid, default = 🎄 Auto, cellular = 🎄 Auto, "1" = 🎄 Auto, "2" = 🎄 Auto, "3" = 🎄 Auto
+
+> load-balance: 随机选用一个可用的子策略
+// 🚞 Balance = load-balance, ProxyA, ProxyB, ProxyC, url = http://www.bing.com/
+
+> 需搭配Clash使用，Clash配置中开启 allow-lan: true
+// 🐱 Clash = select, policy-path=resources/policy/clash.list,update-interval=21600
+// clash.list示例地址：https://raw.githubusercontent.com/ydzydzydz/Rules/master/Surge/resources/policy/clash.list
+
+### ⚠️
+*注意事项：*
+	1	很多域名*不是通过直接访问*来判定的是否有效的，例如126.net，无法直接通过浏览器来访问，但是在使用 *网易云音乐* 的过程中，通过抓包可以发现，这个域名其实用来缓冲音乐。大家在维护的过程中，要善用*抓包工具、搜索引擎*等方式综合判定域名是否有效。
+	2	一个 App 可能访问多个域名，添加的域名要尽量做到完整、全面。如果一个 App 连接域名超过 3 个，而且不与 macOS 或其他 App 共用(如：美团、大众点评、猫眼电影等 App 共用 meituan 相关域名，这时使用域名匹配策略明显具有优势)，便推荐对其使用 USER-AGENT 策略以节省规则条目，例如滴滴出行App。
+
+Telegram频道：https://t.me/who_channel
