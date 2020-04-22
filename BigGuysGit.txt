@@ -1,0 +1,14 @@
+https://raw.githubusercontent.com/liuyudongxiao/Surge/master/Magical.conf
+
+https://raw.githubusercontent.com/liuyudongxiao/Surge/master/nzwSurge.conf
+
+https://raw.githubusercontent.com/liuyudongxiao/Surge/master/MaicooSurge.conf
+
+nzw
+https://github.com/nzw9314/Surge.git
+
+maicoo-l
+https://github.com/maicoo-l/Surge.git
+
+yudong Task 签到
+https://raw.githubusercontent.com/liuyudongxiao/Surge/master/Module/Task.sgmodule
