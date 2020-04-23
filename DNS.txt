@@ -1,0 +1,27 @@
+#Adguard Home by yudong doh
+dns-server = https://www.yudong.online/dns-query
+doh-server = https://www.yudong.online/dns-query
+
+dns-server = 223.5.5.5, 8.8.8.8
+dns-server = system, 119.29.29.29, 119.28.28.28, 1.2.4.8,223.5.5.5
+
+#梵锦
+dns-server = https://dns-api.trli.xyz/dns-query
+doh-server = https://dns-api.trli.xyz/dns-query
+
+#红鱼
+dns-server = https://dns.adgk.net:4433/dns-query
+doh-server = https://dns.adgk.net:4433/dns-query
+
+#nexdns by yudong
+dns-server = https://dns.nextdns.io/28a937/dns-query
+doh-server = https://dns.nextdns.io/28a937/dns-query
+
+红鱼 by maicoo
+dns-server = https://maicoo.d.rubyfish.cn/dns-query
+doh-server = https://maicoo.d.rubyfish.cn/dns-query
+
+#红鱼 by yudong
+dns-server = https://s4w4s.d.rubyfish.cn/dns-query
+doh-server = https://s4w4s.d.rubyfish.cn/dns-query
+
