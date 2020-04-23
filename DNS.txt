@@ -1,7 +1,6 @@
 #Adguard Home by yudong doh
-dns-server = https://www.yudong.online/dns-query
-doh-server = https://www.yudong.online/dns-query
-dns-server = https://dns-api.yudong.online/dns-query
+dns-server = https://dns-api.52dy.xyz/dns-query
+doh-server = https://dns-api.52dy.xyz/dns-query
 
 dns-api.yudong.online = server:112.74.84.175
 
