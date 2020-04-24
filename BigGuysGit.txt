@@ -17,3 +17,6 @@ https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/Task.sgmodule
 NobyDa RewriteRules
 https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/RewriteRules.sgmodule
 
+Angelalisa github
+https://github.com/Angelalisa-x/Surge
+
