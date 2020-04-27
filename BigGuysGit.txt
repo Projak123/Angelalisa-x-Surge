@@ -4,6 +4,8 @@ https://raw.githubusercontent.com/Angelalisa-x/Surge/master/nzwSurge.conf
 
 https://raw.githubusercontent.com/Angelalisa-x/Surge/master/MaicooSurge.conf
 
+https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Angelalisa.conf
+
 Angelalisa github
 https://github.com/Angelalisa-x/Surge
 
