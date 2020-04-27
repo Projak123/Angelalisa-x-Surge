@@ -1,0 +1,10 @@
+#!name=3W Ad Block 
+#!desc=广告过滤
+
+[Proxy Group]
+𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = 𝐑𝐞𝐣𝐞𝐜𝐭, 𝐑𝐞𝐣𝐞𝐜𝐭-𝐓𝐢𝐧𝐲𝐠𝐢𝐟, 𝐃𝐢𝐫𝐞𝐜𝐭
+
+[Rule]
+# > Reject
+DOMAIN-SUFFIX, cc.m.jd.com, 𝐃𝐢𝐫𝐞𝐜𝐭
+RULE-SET,https://anti-ad.win/surge.txt,𝐀𝐝 𝐁𝐥𝐨𝐜𝐤

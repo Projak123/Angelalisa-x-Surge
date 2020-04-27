@@ -21,5 +21,7 @@ https://github.com/maicoo-l/Surge.git
 NobyDa RewriteRules
 https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/RewriteRules.sgmodule
 
+https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/3wAdBlock.sgmodule
+
 
 
