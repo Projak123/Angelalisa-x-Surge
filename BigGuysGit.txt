@@ -12,6 +12,9 @@ https://github.com/Angelalisa-x/Surge
 yudong Task 签到
 https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/Task.sgmodule
 
+Ad Block
+https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/AdBlock.sgmodule
+
 https://raw.githubusercontent.com/Angelalisa-x/QuantumultX/master/QuantumultX.conf
 
 nzw
