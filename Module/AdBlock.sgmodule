@@ -6,7 +6,7 @@
 
 [Rule]
 # > Reject
-DOMAIN-SUFFIX, cc.m.jd.com, 𝐃𝐢𝐫𝐞𝐜𝐭
+DOMAIN-SUFFIX, cc.m.jd.com, DIRECT
 
 #whitelist
 DOMAIN-SET,https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt,DIRECT
