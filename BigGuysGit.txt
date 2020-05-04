@@ -9,8 +9,14 @@ https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Angelalisa.conf
 Angelalisa github
 https://github.com/Angelalisa-x/Surge
 
-yudong Task 签到
+Angelalisa All Config
+https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/AngelalisaAll.sgmodule
+
+Angelalisa Task 签到
 https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/Task.sgmodule
+
+Host whitelist
+https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/Host.sgmodule
 
 Ad Block
 https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/AdBlock.sgmodule
