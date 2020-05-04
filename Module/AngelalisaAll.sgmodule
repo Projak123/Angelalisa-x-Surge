@@ -2,6 +2,36 @@
 #!desc=All Config
 
 
+#!name=Ad Block by Angelalisa 
+#!desc=广告过滤
+
+[Proxy Group]
+𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = 𝐑𝐞𝐣𝐞𝐜𝐭, 𝐑𝐞𝐣𝐞𝐜𝐭-𝐓𝐢𝐧𝐲𝐠𝐢𝐟, 𝐃𝐢𝐫𝐞𝐜𝐭
+
+[Rule]
+# > Reject
+DOMAIN-SUFFIX, cc.m.jd.com, DIRECT
+DOMAIN-SUFFIX, *.360buyimg.com, DIRECT
+
+#whitelist
+//DOMAIN-SET,https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/master/whitelist.txt,DIRECT
+//DOMAIN-SET,https://raw.githubusercontent.com/vokins/yhosts/master/whitelist.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,DIRECT
+
+
+#maicoo
+DOMAIN-SET,https://raw.githubusercontent.com/maicoo-l/Surge/master/rules/Filters.txt,REJECT
+
+#anti
+DOMAIN-SET,https://gitee.com/privacy-protection-tools/anti-ad/raw/master/domains.txt,REJECT
+
+#NobyDa
+DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
+RULE-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Add.txt,REJECT
+DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Plus.txt,REJECT
+
+
 #!name=Hosts by Angelalisa
 #!desc=Add host whitelist
 [Host]
