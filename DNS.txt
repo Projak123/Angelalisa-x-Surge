@@ -28,8 +28,4 @@ dns-server = https://s4w4s.d.rubyfish.cn/dns-query
 doh-server = https://s4w4s.d.rubyfish.cn/dns-query
 
 电问信深圳用户
-202.96.128.86
-202.96.128.166
-
-202.96.128.86
-202.96.128.143
+202.96.128.86, 202.96.128.166, 202.96.128.143
