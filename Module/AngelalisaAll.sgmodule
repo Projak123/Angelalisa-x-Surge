@@ -70,12 +70,6 @@ daysmatter.js = script-path=https://raw.githubusercontent.com/nzw9314/Quantumult
 # > 京东
 JD_DailyBonus.js = type=cron,cronexp=0 0 0/6 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,script-update-interval=0
 
-# > 爱奇艺
-#iQIYI_DailyBonus.js = type=cron,cronexp=5 0 0/12 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/iQIYI-DailyBonus/iQIYI_DailyBonus.js,script-update-interval=0
-
-# > 吾爱破解
-#52pojie.js = type=cron,cronexp=10 0 0/12 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/52pojieDailyBonus/52pojie.js,script-update-interval=0
-
 # 电信营业厅
 # 打开 APP 手动签到一次: 访问下右下角 `我` > `签到` (头像下面)
 10000.js = type=cron,cronexp=20 0 0/12 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0
@@ -88,14 +82,10 @@ neteasemusic.js = type=cron,cronexp=0 1 0/12 * * *,script-path=https://raw.githu
 # 浏览器访问并登录: https://zhiyou.smzdm.com/user/login
 smzdm.js = type=cron,cronexp=25 1 0/12 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/quanx/smzdm.js,script-update-interval=0
 
-# 百度签到
-# 先登录,浏览器访问一下: https://tieba.baidu.com 或者 https://tieba.baidu.com/index/
-#tieba.js = type=cron,cronexp="0 0,1,2 0 * * *",script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.js,script-update-interval=0
-
 # 中国联通
 # 1打开 APP , 进入签到页面, 系统提示: `获取刷新链接: 成功`,然后手动签到 1 次
 # 2首页>天天抽奖, 系统提示 `2` 次: `获取Cookie: 成功 (登录抽奖)` 和 `获取Cookie: 成功 (抽奖次数)`
-10010.js = type=cron,cronexp=20 2 0/8 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
+10010.js = type=cron,cronexp=20 2 0/12 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0
 
 # 美团
 # 打开 APP , 然后手动签到 1 次, (`首页` > `红包签到`)
@@ -103,10 +93,7 @@ meituan.js = type=cron,cronexp=40 2 0/12 * * *,script-path=https://raw.githubuse
 
 # 饿了么   (By @syzzzf)
 # 打开 APP, 访问下`我的`>`签到领红包`(左上角)
-elemSign.js = type=cron,cronexp=35 4 0/8 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
-
-# 斗鱼鱼吧 By @yyfyyf123
-#yubaSign.js = type=cron,cronexp=40 4 0/12 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/yubaSign.js,script-update-interval=0
+elemSign.js = type=cron,cronexp=35 4 0/12 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/elem/elemSign.js,script-update-interval=0
 
 # 携程旅行  (By @barrymchen)
 # 打开App 点击”我的“,然后点击”我的积分“,再点击下面的”签到.任务“即可
@@ -114,7 +101,7 @@ ctrip.js = type=cron,cronexp=45 4 0/12 * * *,script-path=https://raw.githubuserc
 
 # 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
 # APP登陆账号后，点击主页’签到‘,即可
-jddj.js = type=cron,cronexp=25 5 0/8 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0
+jddj.js = type=cron,cronexp=25 5 0/12 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0
 
 # 快手极速版 (By @Macsuny)
 # APP登陆账号后，点击’钱包‘
