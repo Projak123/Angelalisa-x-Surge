@@ -96,12 +96,16 @@ s2.ax1x.com = server:223.6.6.6
 ^https?:\/\/(www.)?suning\.com/ https://suning.com/ 302
 ^https?:\/\/(www.)?yhd\.com https://yhd.com/ 302
 
+# Redirect False to True
 # > IGN China to IGN Global
 ^https?:\/\/(www.)?ign\.xn—fiqs8s\/ http://cn.ign.com/ccpref/us 302
+# > Fake Website Made By C&J Marketing
+^https?:\/\/(www.)?abbyychina\.com\/ https://www.abbyy.cn/ 302
 ^https?:\/\/(www.)?bartender\.cc\/ https://www.macbartender.com/ 302
 ^https?:\/\/(www.)?(betterzipcn|betterzip)\.(com|net)\/ https://macitbetter.com/ 302
 ^https?:\/\/(www.)?beyondcompare\.cc\/ https://www.scootersoftware.com/ 302
 ^https?:\/\/(www.)?bingdianhuanyuan\.cn\/ https://www.faronics.com/zh-hans/products/deep-freeze 302
+^https?:\/\/(www.)?chemdraw\.com\.cn\/ https://www.perkinelmer.com.cn/ 302
 ^https?:\/\/(www.)?codesoftchina\.com\/ https://www.teklynx.com/ 302
 ^https?:\/\/(www.)?coreldrawchina\.com\/ https://www.coreldraw.com/cn/ 302
 ^https?:\/\/(www.)?crossoverchina\.com\/ https://www.codeweavers.com/ 302
