@@ -5,6 +5,11 @@
 #!name=Ad Block by Angelalisa 
 #!desc=广告过滤
 
+[Proxy]
+𝐑𝐞𝐣𝐞𝐜𝐭-𝐓𝐢𝐧𝐲𝐠𝐢𝐟 = reject-tinygif
+𝐑𝐞𝐣𝐞𝐜𝐭 = reject
+𝐃𝐢𝐫𝐞𝐜𝐭 = direct
+
 [Proxy Group]
 𝐀𝐝 𝐁𝐥𝐨𝐜𝐤 = 𝐑𝐞𝐣𝐞𝐜𝐭, 𝐑𝐞𝐣𝐞𝐜𝐭-𝐓𝐢𝐧𝐲𝐠𝐢𝐟, 𝐃𝐢𝐫𝐞𝐜𝐭
 
@@ -30,6 +35,15 @@ DOMAIN-SET,https://gitee.com/privacy-protection-tools/anti-ad/raw/master/domains
 DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block.txt,REJECT
 RULE-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Add.txt,REJECT
 DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_Plus.txt,REJECT
+
+#nzw9314
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
+# RULE-SET,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRuleRegex.list,REJECT
+# BlockOTA
+RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA.list,REJECT
+# Antirevoke
+RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,REJECT
 
 
 #!name=Hosts by Angelalisa
