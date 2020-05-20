@@ -328,8 +328,6 @@ DOMAIN-SUFFIX,zoho.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,api.cloudmobi.net
 DOMAIN-SUFFIX,hotmail.com
-
-DOMAIN-SUFFIX,researchgate.net
 DOMAIN-SUFFIX,springer.com
 DOMAIN-SUFFIX,blackwell-synergy.com
 DOMAIN-SUFFIX,sciencemag.org
