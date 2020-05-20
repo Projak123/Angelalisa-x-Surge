@@ -45,6 +45,9 @@ RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA
 # Antirevoke
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,REJECT
 
+#Angelalise
+DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/ADxiaoyezi.txt,REJECT
+
 # > 京东  去启动广告
 URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$,REJECT-TINYGIF
 # > YouTube 去片头广告
