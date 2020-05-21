@@ -21,15 +21,8 @@ aliexpress.com
 alipay.com
 allegro.pl
 amazon.ca
-amazon.co.uk
 amazon.com
-amazon.de
-amazon.es
-amazon.fr
-amazon.in
-amazon.it
 amazonaws.com
-ameblo.jp
 americanexpress.com
 aol.com
 apple.com
@@ -408,7 +401,6 @@ dns.weixin.qq.com
 cdn.*.qq.com
 *.myapp
 cfg.im
-cmsh
 dd.myapp
 graph.qq.com
 mail.qq.com
@@ -433,13 +425,11 @@ view.inews.qq.com
 passport.youdao.com
 mam.net
 c.tieba.baidu.com
-duapp
 mbd.baidu.com
 t7.baidu.com
 free.sinaim
 sina.cn
 u1.im
-wbapp
 weibo.cn
 wx2.sinaim
 snssdk.com
@@ -479,22 +469,22 @@ yun.rili.cn
 counter-strike.net
 www.chemdraw.com
 pool.v6.bt.n0808.com
-acstatic-dun.126.net 
-b.bdstatic.com  
+acstatic-dun.126.net
+b.bdstatic.com
 static.ws.126.net
-code.createjs.com 
-current.sina.com.cn 
-woocall.sina.com.cn 
-vd.l.qq.com 
+code.createjs.com
+current.sina.com.cn
+woocall.sina.com.cn
+vd.l.qq.com
 union-click.jd.com
 ccc-x.jd.com
 pcbrowser.dd.qq.com
 stdl.qq.com
 g.163.com
-gma.alicdn.com 
-app.adjust.com 
-www.3533.com 
-adashbc.m.taobao.com 
+gma.alicdn.com
+app.adjust.com
+www.3533.com
+adashbc.m.taobao.com
 adashbc.ut.taobao.com
 adash.m.taobao.com
 adashx.m.taobao.com
@@ -529,7 +519,6 @@ image.ibb.co
 treezip.baofeng.net
 treexml.baofeng.net
 config5.update.baofeng.com
-imgbb is a free service for uploading and sharing pictures.
 lib.baomitu.com
 web-disp.titan.mgtv.com
 web-disp1.titan.mgtv.com
@@ -538,32 +527,31 @@ appc.baidu.com
 hmma.baidu.com
 dxp.baidu.com
 ib.snssdk.com
-newapi.shouji.baofeng.com fix baofeng
-mp.weixinbridge.com 
+newapi.shouji.baofeng.com
+mp.weixinbridge.com
 subhd.com
-b.bst.126.net 
+b.bst.126.net
 i8.chinanews.com
 js.passport.qihucdn.com
 jspassport.ssl.qhimg.com
 www.gugeys.com
 img.alicdn.com
-s.wasu.cn css js
 shark.douyucdn.cn
 staticlive.douyucdn.cn
-i.flow.browser.oppomobile.com oppo 
-dhfs.oppomobile.com oppo 
-yun.duiba.com.cn 
-wd.geilicdn.com weidian image
+i.flow.browser.oppomobile.com
+dhfs.oppomobile.com
+yun.duiba.com.cn
+wd.geilicdn.com
 images2015.cnblogs.com
 abtest.mistat.xiaomi.com
 data.mistat.xiaomi.com
 weatherapi.market.xiaomi.com
-dl.op.wpscdn.cn Ӱ
-ip.cms.sohu.com 
+dl.op.wpscdn.cn
+ip.cms.sohu.com
 s0.mp.sohu.com
 zz.m.sohu.com
 you.ctrip.com
-gss0.bdstatic.com ֪
+gss0.bdstatic.com
 gss2.bdstatic.com
 ss0.bdstatic.com
 d.g.mi.com
