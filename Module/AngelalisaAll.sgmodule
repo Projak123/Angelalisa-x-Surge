@@ -19,12 +19,12 @@ DOMAIN-SUFFIX, cc.m.jd.com, DIRECT
 DOMAIN-SUFFIX, *.360buyimg.com, DIRECT
 
 #whitelist
-//DOMAIN-SET,https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt,DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/master/whitelist.txt,DIRECT
-//DOMAIN-SET,https://raw.githubusercontent.com/vokins/yhosts/master/whitelist.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/vokins/yhosts/master/whitelist.txt,DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,DIRECT
 
-RULE-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/AngelalisaWhiteList.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/AngelalisaWhiteList.txt,DIRECT
 
 
 #maicoo
@@ -47,7 +47,7 @@ RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA
 # Antirevoke
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,REJECT
 
-#Angelalise
+#Angelalise 18w
 DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/ADxiaoyezi.txt,REJECT
 
 # > 京东  去启动广告
