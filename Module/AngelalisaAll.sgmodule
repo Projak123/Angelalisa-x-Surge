@@ -1,10 +1,6 @@
 #!name=All Config By Angelalisa
 #!desc=All Config
 
-
-#!name=Ad Block by Angelalisa 
-#!desc=广告过滤
-
 [Proxy]
 𝐑𝐞𝐣𝐞𝐜𝐭-𝐓𝐢𝐧𝐲𝐠𝐢𝐟 = reject-tinygif
 𝐑𝐞𝐣𝐞𝐜𝐭 = reject
