@@ -24,9 +24,6 @@ DOMAIN-SET,https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/mas
 #DOMAIN-SET,https://raw.githubusercontent.com/vokins/yhosts/master/whitelist.txt,DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,DIRECT
 
-DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/AngelalisaWhiteList.txt,DIRECT
-
-
 #maicoo
 DOMAIN-SET,https://raw.githubusercontent.com/maicoo-l/Surge/master/rules/Filters.txt,REJECT
 
