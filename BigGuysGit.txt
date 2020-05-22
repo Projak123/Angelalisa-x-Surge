@@ -34,5 +34,12 @@ https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Module/RewriteRules
 
 https://raw.githubusercontent.com/Angelalisa-x/Surge/master/Module/3wAdBlock.sgmodule
 
+whitelist
+#whitelist
+#DOMAIN-SET,https://raw.githubusercontent.com/liwenjie119/adg-rules/master/white.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/WildcardTech/Filter-Domain-List/master/whitelist.txt,DIRECT
+#DOMAIN-SET,https://raw.githubusercontent.com/vokins/yhosts/master/whitelist.txt,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/Ultimate-Hosts-Blacklist/whitelist/master/domains.list,DIRECT
+
 
 
