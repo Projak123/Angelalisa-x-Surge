@@ -41,7 +41,6 @@ RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,REJECT
 
 #angelalisa
-RULE-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/AngelalisaWhiteList.txt,DIRECT
 DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/ADxiaoyezi.txt,REJECT
 
 # > 京东  去启动广告
