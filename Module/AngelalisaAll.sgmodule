@@ -37,14 +37,15 @@ DOMAIN-SET,https://raw.githubusercontent.com/NobyDa/ND-AD/master/Surge/AD_Block_
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
 RULE-SET,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRuleRegex.list,REJECT
+
 # BlockOTA
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/BlockOTA.list,REJECT
+
 # Antirevoke
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,REJECT
 
-#angelalisa whitelist
+#angelalisa
 RULE-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/AngelalisaWhiteList.txt,DIRECT
-#Angelalise 18w
 DOMAIN-SET,https://raw.githubusercontent.com/Angelalisa-x/Surge/master/ADxiaoyezi.txt,REJECT
 
 # > 京东  去启动广告
